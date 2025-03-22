@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+h1, h3 {
+    color: #0056b3;
+}

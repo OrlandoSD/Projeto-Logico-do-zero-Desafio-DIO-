@@ -1,0 +1,81 @@
+Entidades e Atributos
+Clientes
+
+ID_Cliente (PK)
+
+Nome
+
+CPF_CNPJ (único e não nulo)
+
+Endereço
+
+Contato
+
+Veículos
+
+ID_Veiculo (PK)
+
+Placa (único)
+
+Modelo
+
+Marca
+
+Ano
+
+ID_Cliente (FK para Clientes)
+
+Ordens_de_Servico
+
+ID_OS (PK)
+
+ID_Veiculo (FK para Veículos)
+
+Data_Abertura
+
+Data_Conclusao
+
+Valor_Total
+
+Servicos
+
+ID_Servico (PK)
+
+Descricao
+
+Preco
+
+OS_Servicos (Tabela Associativa para Ordens e Serviços)
+
+ID_OS (FK para Ordens_de_Servico)
+
+ID_Servico (FK para Servicos)
+
+Quantidade
+
+Subtotal
+
+Funcionarios
+
+ID_Funcionario (PK)
+
+Nome
+
+Cargo
+
+Salario
+
+Funcionarios_Ordens (Tabela Associativa para Ordens e Funcionários)
+
+ID_OS (FK para Ordens_de_Servico)
+
+ID_Funcionario (FK para Funcionarios)
+
+Relacionamentos
+Clientes e Veículos: Relacionamento 1:N (um cliente pode ter vários veículos).
+
+Veículos e Ordens_de_Servico: Relacionamento 1:N (um veículo pode ter várias ordens de serviço).
+
+Ordens_de_Servico e Servicos: Relacionamento N:N através da tabela associativa OS_Servicos.
+
+Ordens_de_Servico e Funcionarios: Relacionamento N:N através da tabela associativa Funcionarios_Ordens.
